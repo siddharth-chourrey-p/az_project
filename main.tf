@@ -21,3 +21,8 @@ resource "azurerm_resource_group" "stage_rg" {
   name = "stage_rg"
   location = "eastus"
 }
+
+resource "azurerm_resource_group" "prod_rg" {
+  name = "prod_rg"
+  location = "eastus"
+}
