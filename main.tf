@@ -27,6 +27,12 @@ resource "azurerm_resource_group" "prod_rg" {
   location = "eastus"
 }
 
+
+resource "azurerm_resource_group" "pre_prod_rg" {
+  name     = "pre_rg"
+  location = "eastus"
+}
+
 resource "azurerm_resource_group" "stage" {
   name     = "stage"
   location = "eastus"
