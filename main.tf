@@ -26,3 +26,7 @@ resource "azurerm_resource_group" "prod_rg" {
   name = "prod_rg"
   location = "eastus"
 }
+resource "azurerm_resource_group" "qa" {
+  name = "qa_rg"
+  location = "eastus"
+}
