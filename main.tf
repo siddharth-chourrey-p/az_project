@@ -47,3 +47,11 @@ resource "azurerm_resource_group" "Dev_rg2" {
   name     = "Dev_rg2"
   location = "eastus"
 }
+resource "azurerm_resource_group" "Dev_rrr" {
+  name     = "rrr_rg"
+  location = "eastus"
+}
+resource "azurerm_resource_group" "Dev_rrr1" {
+  name     = "rrr_rg1"
+  location = "eastus"
+}
