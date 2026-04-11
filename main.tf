@@ -42,3 +42,8 @@ resource "azurerm_resource_group" "qa" {
   name     = "qa_rg"
   location = "eastus"
 }
+
+resource "azurerm_resource_group" "Dev_rg2" {
+  name     = "Dev_rg2"
+  location = "eastus"
+}
