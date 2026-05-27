@@ -61,3 +61,8 @@ resource "azurerm_resource_group" "Dev_rg5" {
   name     = "Dev_rg5"
   location = "eastus"
 }
+
+resource "azurerm_resource_group" "uat" {
+  name     = "uat_rg"
+  location = "westus"
+}
