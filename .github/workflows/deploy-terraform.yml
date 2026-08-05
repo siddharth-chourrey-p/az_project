@@ -5,10 +5,19 @@ on:
     branches: [ "master" ]
   pull_request:
 
+permissions:
+  contents: read
+
+env:
+  ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+
 jobs:
   terraform_deploy:
     name: 'Terraform Steps'
     runs-on: ubuntu-latest
+
 
     steps: #List of commands [], -
 
