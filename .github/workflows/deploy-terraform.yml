@@ -1,0 +1,37 @@
+name: 'Terrafrom Deployment"
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+
+jobs:
+  terraform_deploy:
+    name: 'Terraform Steps'
+    runs-on: ubuntu-latest
+
+    steps: #List of commands [], -
+
+    - name: Checkout
+      run: actions/checkout@v4 #ek tool he code ko repo se clone karega
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        version: "1.7.0"
+      
+    - name: "Terraform init"
+      run: terraform init
+  
+    - name: Terraform formate
+      run: terraform fmt
+  
+    - name: Validate Terraform syntax
+      run: terraform validate
+
+    - name: Terraform Plan
+      run: terraform plan
+  
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
+      run: terraform apply -auto-approve
