@@ -22,7 +22,7 @@ jobs:
     steps: #List of commands [], -
 
     - name: Checkout
-      run: actions/checkout@v4 #ek tool he code ko repo se clone karega
+      uses: actions/checkout@v4 #ek tool he code ko repo se clone karega
 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
